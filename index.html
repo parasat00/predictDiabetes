@@ -1,0 +1,139 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diabetes Prediction</title>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <style>
+            body{
+                margin:0;
+                padding:0;
+                font-family: 'Montserrat';
+                background: #2980b9 url('https://static.tumblr.com/03fbbc566b081016810402488936fbae/pqpk3dn/MRSmlzpj3/tumblr_static_bg3.png') repeat 0 0;
+                -webkit-animation: 10s linear 0s normal none infinite animate;
+                -moz-animation: 10s linear 0s normal none infinite animate;
+                -ms-animation: 10s linear 0s normal none infinite animate;
+                -o-animation: 10s linear 0s normal none infinite animate;
+                animation: 10s linear 0s normal none infinite animate;
+
+            }
+
+            @-webkit-keyframes animate {
+                from {background-position:0 0;}
+                to {background-position: 500px 0;}
+            }
+
+            @-moz-keyframes animate {
+                from {background-position:0 0;}
+                to {background-position: 500px 0;}
+            }
+
+            @-ms-keyframes animate {
+                from {background-position:0 0;}
+                to {background-position: 500px 0;}
+            }
+
+            @-o-keyframes animate {
+                from {background-position:0 0;}
+                to {background-position: 500px 0;}
+            }
+
+            @keyframes animate {
+                from {background-position:0 0;}
+                to {background-position: 500px 0;}
+            }
+            .main {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 550px;
+                border-radius: 15px;
+                background-color: #fff;
+                padding: 3% 2% 5% 2%;
+            }
+            h1 {
+                color: #0086b3;
+                font-size: 30px;
+                font-weight: bold;
+            }
+            input[type=submit] {
+                background-color: #4dc3ff;
+            }
+            input[type=reset] {
+                background-color: #cd5c5c;
+                margin-right: 20px;
+            }
+            .button {
+                border: 2px;
+                color: white;
+                padding: 8px 16px;
+                cursor: pointer;
+                margin-top: 15px;
+            }
+
+            table {
+                width: 85%;
+                margin-left: 6%;
+            }
+            td[align=right] {
+                text-align: -webkit-left;
+            }
+            .break_above{
+                margin-top: 15px;
+            }
+    </style>
+</head>
+<body>
+    <div align="center" class="main">
+        <h1>Welcome to a Diabetes Prediction System</h1>
+        <h4>Please enter the following information: </h4>
+
+        <form action="result">
+            <table>
+                <tr>
+                    <td align="right"><label for="n1">Number of pregnancies: </label></td>
+                    <td align="left"><input id="n1" name="n1" type="text"></td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="n2">Glucose: </label></td>
+                    <td align="left"><input id="n2" name="n2" type="text"></td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="n3">Blood Pressure: </label></td>
+                    <td align="left"><input id="n3" name="n3" type="text"></td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="n4">Skin thickness: </label></td>
+                    <td align="left"><input id="n4" name="n4" type="text"></td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="n5">Insulin: </label></td>
+                    <td align="left"><input id="n5" name="n5" type="text"></td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="n6">BMI: </label></td>
+                    <td align="left"><input id="n6" name="n6" type="text"></td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="n7">Diabetes pedigree function: </label></td>
+                    <td align="left"><input id="n7" name="n7" type="text"></td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="n8">Age: </label></td>
+                    <td align="left"><input id="n8" name="n8" type="text"></td>
+                </tr>
+            </table>
+
+            <input type="reset" class="button" value="Clear">
+            <input type="submit" class="button" value="Check">
+
+        </form>
+        <hr>
+        <div class="break_above">Result: <br> <strong>{{result2}}</strong></div>
+        <div class="break_above">Hey, our system is not as accurate as we want it to be yet. So it can make mistakes sometimes. Hopefully you understand</div>
+    </div>
+</body>
+</html>
